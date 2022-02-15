@@ -41,7 +41,10 @@ len(good_points)
 result = cv2.drawMatches(cheque_image, kp1 , software_image, kp2, good_points, None)
 #calculating ratio
 print("The match points are : ",len(good_points))
-
+if(len(good_points)>120):
+    print("The transaction can be proceeded.")
+else:
+    print("The transaction cannot be proceeded.")
 
 
 #wait key
